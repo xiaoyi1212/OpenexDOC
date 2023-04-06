@@ -709,9 +709,10 @@
 <li><code>global</code>公开的,可以跨线程使用</li>
 </ul>
 <p>下面介绍了如何定义和更改一个私密变量</p>
-<p><div class="highlight"><span class="filename">script.exf</span><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">value</span><span class="w"> </span><span class="n">local</span><span class="w"> </span><span class="n">name</span><span class="ss">:&quot;注释&quot;</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">23</span><span class="p">;</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="no">true</span><span class="p">;</span>
-</code></pre></div>
+<p><div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">script.exf</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
+<span class="normal"><a href="#__codelineno-0-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="n">value</span><span class="w"> </span><span class="n">local</span><span class="w"> </span><span class="n">name</span><span class="ss">:&quot;注释&quot;</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">23</span><span class="p">;</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="no">true</span><span class="p">;</span>
+</code></pre></div></td></tr></table></div>
 我们可以看到变量定义遵循<code>value</code> <code>local/global</code> <code>变量名</code>:<code>"备注"</code> = <code>初始值</code>;的格式,且OpenEX对变量的类型没有严格要求</p>
 <div class="admonition info">
 <p class="admonition-title">变量的注释</p>
@@ -723,15 +724,17 @@
 <ul>
 <li>数组变量定义与普通变量类似,但区别在于初始值的写法</li>
 </ul>
-<p><div class="highlight"><span class="filename">script.exf</span><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="n">value</span><span class="w"> </span><span class="n">local</span><span class="w"> </span><span class="n">array_name</span><span class="ss">:&quot;注释&quot;</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="mi">123</span><span class="p">,</span><span class="no">true</span><span class="p">,</span><span class="no">false</span><span class="p">,</span><span class="n">null</span><span class="p">,</span><span class="mf">3.14</span><span class="p">];</span>
-</code></pre></div>
+<p><div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">script.exf</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="n">value</span><span class="w"> </span><span class="n">local</span><span class="w"> </span><span class="n">array_name</span><span class="ss">:&quot;注释&quot;</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="mi">123</span><span class="p">,</span><span class="no">true</span><span class="p">,</span><span class="no">false</span><span class="p">,</span><span class="n">null</span><span class="p">,</span><span class="mf">3.14</span><span class="p">];</span>
+</code></pre></div></td></tr></table></div>
 我们可以看到数组变量初始值是由<code>[]</code>来定义的, 且数组内元素类型可以各不相同
 <br>
 你甚至可以在数组内存储变量或嵌套另外一个数组
-<div class="highlight"><span class="filename">script.exf</span><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="n">value</span><span class="w"> </span><span class="n">local</span><span class="w"> </span><span class="n">int</span><span class="ss">:&quot;整形&quot;</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">23</span><span class="p">;</span>
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="n">value</span><span class="w"> </span><span class="n">local</span><span class="w"> </span><span class="n">arrya_1</span><span class="ss">:&quot;数组1&quot;</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="mi">123</span><span class="p">,</span><span class="mi">222</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="no">true</span><span class="p">];</span>
-<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="n">value</span><span class="w"> </span><span class="n">local</span><span class="w"> </span><span class="n">array_2</span><span class="ss">:&quot;数组2&quot;</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="n">array_1</span><span class="p">,</span><span class="mi">314</span><span class="p">,</span><span class="n">int</span><span class="p">];</span>
-</code></pre></div></p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">script.exf</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span>
+<span class="normal"><a href="#__codelineno-2-2">2</a></span>
+<span class="normal"><a href="#__codelineno-2-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="n">value</span><span class="w"> </span><span class="n">local</span><span class="w"> </span><span class="n">int</span><span class="ss">:&quot;整形&quot;</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">23</span><span class="p">;</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="n">value</span><span class="w"> </span><span class="n">local</span><span class="w"> </span><span class="n">arrya_1</span><span class="ss">:&quot;数组1&quot;</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="mi">123</span><span class="p">,</span><span class="mi">222</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="no">true</span><span class="p">];</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="n">value</span><span class="w"> </span><span class="n">local</span><span class="w"> </span><span class="n">array_2</span><span class="ss">:&quot;数组2&quot;</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="n">array_1</span><span class="p">,</span><span class="mi">314</span><span class="p">,</span><span class="n">int</span><span class="p">];</span>
+</code></pre></div></td></tr></table></div></p>
 <h2 id="_3">变量类型</h2>
 <p>OpenEX变量为弱类型不代表没有类型,以下是使用<code>type</code>库的<code>typeof</code>函数可以检测到的所有变量类型,使用<code>type</code>库你需要<code>include "type";</code>来导入该库
 <br></p>
@@ -800,11 +803,6 @@
       Copyright © 2023 DotCS
     </div>
   
-  
-    Made with
-    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
-      Material for MkDocs
-    </a>
   
 </div>
       

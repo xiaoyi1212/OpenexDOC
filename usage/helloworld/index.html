@@ -685,16 +685,19 @@
 <li>向控制台输出简单的“你好！世界!”</li>
 <li>以下会以<code>OpenEXAST-v0.2.0/WindowsPowerShell</code>版本为基础举例子</li>
 </ul>
-<p><div class="highlight"><span class="filename">script.exf</span><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nx">include</span><span class="w"> </span><span class="s2">&quot;system&quot;</span><span class="p">;</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="nx">system</span><span class="p">.</span><span class="nx">print</span><span class="p">(</span><span class="s2">&quot;Hello! World!&quot;</span><span class="p">);</span>
-</code></pre></div>
+<p><div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">script.exf</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
+<span class="normal"><a href="#__codelineno-0-2">2</a></span>
+<span class="normal"><a href="#__codelineno-0-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="nx">include</span><span class="w"> </span><span class="s2">&quot;system&quot;</span><span class="p">;</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2"></a>
+<a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="nx">system</span><span class="p">.</span><span class="nx">print</span><span class="p">(</span><span class="s2">&quot;Hello! World!&quot;</span><span class="p">);</span>
+</code></pre></div></td></tr></table></div>
 以上是一个简单的输出<code>Hello! World!</code>的代码 <br>
 使用<code>java -jar OpenEXAST-v0.2.0.jar -filename:main.exf</code>命令运行 <br>
 我们可一看到控制台输出以下结果
-<div class="highlight"><span class="filename">Power Shell</span><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>PS C:\User\Administrator&gt; java -jar OpenEXAST-v0.2.0.jar -filename:script.exf
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>Hello! World!
-</code></pre></div></p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Power Shell</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
+<span class="normal"><a href="#__codelineno-1-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a>PS C:\User\Administrator&gt; java -jar OpenEXAST-v0.2.0.jar -filename:script.exf
+<a id="__codelineno-1-2" name="__codelineno-1-2"></a>Hello! World!
+</code></pre></div></td></tr></table></div></p>
 <h2 id="console-input">标准控制台输出 Console Input</h2>
 <ul>
 <li>以下会从控制台截取单行输入</li>
@@ -702,15 +705,19 @@
 <li>调用<code>input()</code>函数时会阻塞当前线程</li>
 <li>直到控制台按下回车表示输入完毕后才放开线程继续执行下面的代码</li>
 </ul>
-<p><div class="highlight"><span class="filename">script.exf</span><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="nx">include</span><span class="w"> </span><span class="s2">&quot;system&quot;</span><span class="p">;</span>
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>
-<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="nx">system</span><span class="p">.</span><span class="nx">print</span><span class="p">(</span><span class="nx">system</span><span class="p">.</span><span class="nx">input</span><span class="p">());</span>
-</code></pre></div>
+<p><div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">script.exf</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span>
+<span class="normal"><a href="#__codelineno-2-2">2</a></span>
+<span class="normal"><a href="#__codelineno-2-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="nx">include</span><span class="w"> </span><span class="s2">&quot;system&quot;</span><span class="p">;</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2"></a>
+<a id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="nx">system</span><span class="p">.</span><span class="nx">print</span><span class="p">(</span><span class="nx">system</span><span class="p">.</span><span class="nx">input</span><span class="p">());</span>
+</code></pre></div></td></tr></table></div>
 新版OpenEX支持参数为函数调用这种高级的语法
-<div class="highlight"><span class="filename">Powershell</span><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>PS C:\User\Administrator&gt; java -jar OpenEXAST-v0.2.0.jar -filename:script.exf
-<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>阿巴阿巴
-<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>阿巴阿巴
-</code></pre></div></p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Powershell</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span>
+<span class="normal"><a href="#__codelineno-3-2">2</a></span>
+<span class="normal"><a href="#__codelineno-3-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a>PS C:\User\Administrator&gt; java -jar OpenEXAST-v0.2.0.jar -filename:script.exf
+<a id="__codelineno-3-2" name="__codelineno-3-2"></a>阿巴阿巴
+<a id="__codelineno-3-3" name="__codelineno-3-3"></a>阿巴阿巴
+</code></pre></div></td></tr></table></div></p>
 
 
 
@@ -735,11 +742,6 @@
       Copyright © 2023 DotCS
     </div>
   
-  
-    Made with
-    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
-      Material for MkDocs
-    </a>
   
 </div>
       
